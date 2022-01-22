@@ -1,8 +1,38 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import '../styles/globals.css';
+import useDark from '../hooks/useDark';
+import { ThemeProvider } from '../contexts/ThemeContext';
+import Header from '../components/Header';
+import ScrollTop from '../components/ScrollTop';
+import { useApollo } from '../apollo/client';
+
+import type { AppProps } from 'next/app';
+import clsx from 'clsx';
+import { ApolloProvider } from '@apollo/client';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  const { isDark, setIsDark } = useDark();
+  const apolloClient = useApollo(pageProps.initialApolloState);
+
+  const changeTheme = () => {
+    setIsDark(!isDark);
+  };
+
+  return (
+    <ThemeProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
+      <div
+        className={clsx(
+          isDark ? 'bg-theme-dark dark text-white' : null,
+          'font-montserrat'
+        )}
+      >
+        <Header />
+        <ApolloProvider client={apolloClient}>
+          <Component {...pageProps} />
+        </ApolloProvider>
+        <ScrollTop />
+      </div>
+    </ThemeProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;

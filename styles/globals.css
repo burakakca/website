@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Agustina Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Agustina Regular'), url('/fonts/Agustina.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url('/fonts/Montserrat-Regular.ttf') format('woff');
+  font-display: swap;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+img {
+  display: inline-block;
+}
