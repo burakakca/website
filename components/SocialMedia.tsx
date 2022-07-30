@@ -42,7 +42,7 @@ export default function socialMedia() {
       <SocialButton href={socialMediaLinks.linkedin}>
         <Linkedin />
       </SocialButton>
-      <SocialButton href={socialMediaLinks.gmail}>
+      <SocialButton href={`mailto: ${socialMediaLinks.gmail}`}>
         <Gmail />
       </SocialButton>
       <SocialButton href={socialMediaLinks.github}>
