@@ -6,6 +6,7 @@ import ScrollTop from '../components/ScrollTop';
 import { useApollo } from '../apollo/client';
 
 import type { AppProps } from 'next/app';
+import { useRouter } from "next/router"
 import clsx from 'clsx';
 import { ApolloProvider } from '@apollo/client';
 
@@ -17,6 +18,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     setIsDark(!isDark);
   };
 
+  const router = useRouter();
+
+  console.log(router.pathname);
+
   return (
     <ThemeProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
       <div
@@ -25,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           'font-montserrat'
         )}
       >
-        <Header />
+        {router.pathname === "/404" ? <></> : <Header /> }
         <ApolloProvider client={apolloClient}>
           <Component {...pageProps} />
         </ApolloProvider>
