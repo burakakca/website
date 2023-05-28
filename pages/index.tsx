@@ -40,6 +40,7 @@ export default function Home() {
         />
         <meta name='msapplication-TileColor' content='#da532c' />
         <meta name='theme-color' content='#5b21b6' />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; https://vitals.vercel-insights.com;" />
       </Head>
       <Greeting />
       <WhatIdo />
