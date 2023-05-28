@@ -6,6 +6,7 @@ import ScrollTop from '../components/ScrollTop';
 import { useApollo } from '../apollo/client';
 
 import type { AppProps } from 'next/app';
+import { Analytics } from '@vercel/analytics/react';
 import { useRouter } from "next/router"
 import clsx from 'clsx';
 import { ApolloProvider } from '@apollo/client';
@@ -33,6 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         {router.pathname === "/404" ? <></> : <Header /> }
         <ApolloProvider client={apolloClient}>
           <Component {...pageProps} />
+          <Analytics />
         </ApolloProvider>
         <ScrollTop />
       </div>
