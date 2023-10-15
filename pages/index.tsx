@@ -15,6 +15,15 @@ export default function Home() {
       <Head>
         <title>Burak Akça | Homepage</title>
         <meta property='og:title' content='Burak Akça | Homepage' key='title' />
+        <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/56919004?u=0992e1322f4b32628cfb5a5cd17ff6cee021963a&v=4"></meta>
+        <meta property="twitter:title" content="Hi all, I'm Burak"></meta>
+        <meta property="twitter:description" content="A passionate Software Developer having an experience of
+              building Progressive Web Applications with JavaScript, Reactjs and
+              some other cool libraries / frameworks."></meta>
+        <meta property="description" content="Software Developer" />
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/56919004?u=0992e1322f4b32628cfb5a5cd17ff6cee021963a&v=4"></meta>
+        <meta property="og:description" content="Hi all, I'm Burak" />
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/56919004?u=0992e1322f4b32628cfb5a5cd17ff6cee021963a&v=4"></meta>
         <link
           rel='apple-touch-icon'
           sizes='180x180'

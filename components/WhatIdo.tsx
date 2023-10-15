@@ -27,7 +27,7 @@ export default function WhatIdo() {
             What I do
           </h1>
           <p className='text-base antialiased text-center text-gray-500 2k:text-2xl xl:text-left'>
-            CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK
+            CRAZY DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK
           </p>
           <Techs />
           <div className='text-left md:text-center lg:text-left'>

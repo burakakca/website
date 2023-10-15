@@ -21,8 +21,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const router = useRouter();
 
-  console.log(router.pathname);
-
   return (
     <ThemeProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
       <div

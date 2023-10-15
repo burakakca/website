@@ -15,7 +15,7 @@ const Greeting = () => {
               <span className='ml-2 animate-waveEmoji'>👋</span>
             </h1>
             <p className='my-1 text-base text-center text-gray-400 dark:text-white lg:leading-9 xl:leading-10 lg:text-left lg:text-lg xl:text-2xl 2k:text-3xl'>
-              A passionate Full Stack Software Developer having an experience of
+              A passionate Software Developer having an experience of
               building Progressive Web Applications with JavaScript, Reactjs and
               some other cool libraries / frameworks.
             </p>
